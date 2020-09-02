@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot Thymeleaf</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+<div align="center">
+	<h1>Create Student</h1>
+	<form action="#" th:action="@{/student/createstudent}"
+		th:object="${student}" method="POST">
+		<table>
+			<tr>
+				<td>Student Name</td>
+				<td><input type="text" th:field="*{name}" /> <!-- <label th:if="${#fields.hasErrors('userName')}"  th:class="'error'">Enter User Name</label> -->
+				</td>
+			</tr>
+			<tr>
+				<td>Roll Number</td>
+				<td><input type="text" th:field="*{rollNumber}" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" th:value="Submit" /> <input
+					type="reset" th:value="Reset" /></td>
+			</tr>
+		</table>
+	</form>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Product Manager</title>
+</head>
+<body>
+<div align="center">
+    <h1>Welcome to Spring Boot CRUD example using Thymleaf and MySQL</h1>
+    <a href="/student/createstudent">Create New Product</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Roll Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="student : ${students}">
+                <td th:text="${student.id}">Student ID</td>
+                <td th:text="${student.name}">Name</td>
+                <td th:text="${student.rollNumber}">Roll Number</td>
+                <td>
+                    <a th:href="/@{'/edit/' + ${product.id}}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a th:href="/@{'/delete/' + ${product.id}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+</html> -->
