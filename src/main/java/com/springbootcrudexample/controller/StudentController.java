@@ -23,6 +23,7 @@ import com.springbootcrudexample.service.StudentService;
 @RequestMapping("/student")
 public class StudentController {
 
+
 	@Autowired
 	private StudentService studentService;
 	
