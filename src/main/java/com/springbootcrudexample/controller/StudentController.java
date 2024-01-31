@@ -24,8 +24,6 @@ import com.springbootcrudexample.service.StudentService;
 public class StudentController {
 	@Autowired
 	private StudentService studentService;
-	
-	
 	@Autowired
 	private StudentRepository studentRepository;
 
